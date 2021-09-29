@@ -11,7 +11,7 @@ My notes taken from the Tkinter course
 ```{python}
 ```
 
-## Chapter 1
+## Chapter 2 - Basics
 
 ### Basic steps
 
@@ -78,6 +78,32 @@ __basics2_buttons_and_grid.py__
 
 ### Radiobuttons
 
+- A set of radiobuttons act as a group
+- To show that a group of radiobuttons are related, put all of the group in their own frame
+- Create a string or numeric variable by calling tkinter's __StrVar()__ or __IntVar()__ and assign to a variable
+- Set a value for the variable by calling its _set_ method
+- Set the _variable_ option in the _Radiobutton_ constructor to the name of the variable for all of the radiobuttons in the group
+- Set different values for each radiobutton by setting the _value_ option in the _Radiobutton_ constructor
 
+```{python}
+number = IntVar()
+number.set(1)
+radio_1 = tkinter.Radiobutton(input_frame, text='Print the number one!', variable=number, value=1)
+radio_2 = tkinter.Radiobutton(input_frame, text="Print the number two!", variable=number, value=2)
+```
+
+### Images
+
+- Easier to use PNGs than JPEGs
+- For PNGs, create a Tkinter image object: _img = tkinter.PhotoImage(file='image_file.png)_
+- Add the image object to a Tkinter widget: _lbl = tkinter.Label(root, image=imge)_
+- For JPEGs, first have to use __ImageTk__ from __PIL__:
+
+```{python}
+image = ImageTk.PhotoImage(Image.open('file.jpg'))
+label = tkinter.Label(root, image=image)
+```
+
+## Chapter 3 - Hello World GUI
 
 
