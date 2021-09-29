@@ -106,4 +106,15 @@ label = tkinter.Label(root, image=image)
 
 ## Chapter 3 - Hello World GUI
 
+Choose colours using a colour scheme generation:
+
+[Color scheme generation](https://coolors.co)
+
+The use of radiobuttons is exemplified here
+
+- Create an IntVar or StringVar instance - refer to this as the __control variable__
+- Create a group of radiobuttons
+- Set all members of the group the to share the same control variable by setting the _variable_ option
+- Use the control variable's _get_ and _set_ methods to assign and retrieve its value
+
 
